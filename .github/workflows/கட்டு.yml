@@ -3,7 +3,7 @@ name: தொடர்ச்சியான ஒருங்கிணைப்ப�
 on:
   push:
     branches:
-      - main
+      - முதன்மை
 
 permissions:
   contents: write
