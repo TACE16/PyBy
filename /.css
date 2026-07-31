@@ -1,0 +1,180 @@
+/* ==========================================================================
+   TACE16-Font (Private Use Area only)
+   ========================================================================== */
+
+@font-face {
+    font-family: "TAC-Barathi";
+    src: url("TAC-Barathi.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+E100 – U+E38D;
+}
+
+/* ==========================================================================
+   Body
+   ========================================================================== */
+
+body {
+    font-family:
+        "TAC-Barathi",
+        "Times New Roman",
+        serif;
+
+    font-size: 16pt;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+h1,h2,h3,h4,h5,h6{
+    page-break-after:avoid;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+table{
+    border-collapse:collapse;
+    width:100%;
+}
+
+th,td{
+    padding:6px 8px;
+    border:1px solid #ccc;
+}
+
+/* ==========================================================================
+   Inline code
+   ========================================================================== */
+
+code{
+    font-family:
+        "TAC-Barathi",
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+}
+
+/* ==========================================================================
+   Code blocks
+   ========================================================================== */
+
+pre{
+    background:#f8f8f8;
+    border:1px solid #ddd;
+
+    padding:12px;
+
+    overflow:auto;
+
+    white-space:pre-wrap;
+
+    page-break-inside:avoid;
+}
+
+pre code{
+    font-family:
+        "TAC-Barathi",
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+
+    font-size:15pt;
+
+    line-height:1.5;
+}
+
+/* ==========================================================================
+   Highlight.js (Tomorrow Theme)
+   ========================================================================== */
+
+.hljs-comment,
+.hljs-quote{
+    color:#8e908c;
+    font-style:italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal{
+    color:#8959a8;
+    font-weight:bold;
+}
+
+.hljs-string,
+.hljs-doctag{
+    color:#718c00;
+}
+
+.hljs-title,
+.hljs-title.function_,
+.hljs-section{
+    color:#4271ae;
+}
+
+.hljs-function{
+    color:#4271ae;
+}
+
+.hljs-built_in,
+.hljs-builtin-name{
+    color:#4271ae;
+}
+
+.hljs-number{
+    color:#f5871f;
+}
+
+.hljs-type,
+.hljs-class{
+    color:#eab700;
+}
+
+.hljs-variable,
+.hljs-params,
+.hljs-attr,
+.hljs-attribute{
+    color:#c82829;
+}
+
+.hljs-meta{
+    color:#a3685a;
+}
+
+.hljs-addition{
+    color:#718c00;
+}
+
+.hljs-deletion{
+    color:#c82829;
+}
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+
+img{
+    max-width:100%;
+    page-break-inside:avoid;
+}
+
+/* ==========================================================================
+   Better page breaking
+   ========================================================================== */
+
+pre,
+table,
+blockquote,
+img{
+    page-break-inside:avoid;
+}
+
+p{
+    orphans:3;
+    widows:3;
+}

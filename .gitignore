@@ -1,0 +1,17 @@
+_book
+*.pyc
+.*.sw*
+byte-of-python*.*
+மலைப்பாம்புக்கடி*.*
+*.*
+node_modules
+package-lock.json
+# package.json
+
+venv
+.vscode
+.DS_Store
+.codelite/*
+*.workspace
+.tmp-build
+book

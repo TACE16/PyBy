@@ -1,0 +1,38 @@
+{
+  "title": "",
+  "language": "ta",
+  "structure": {
+    "readme": "README.md"
+  },
+  "pdf": {
+    "fontFamily": "TAC-Barathi",
+    "fontSize": 16,
+    "embedFonts": true
+  },
+  "pluginsConfig": {
+    "fontsettings": {
+      "theme": "night",
+      "family": "serif",
+      "size": 3
+    }
+  },
+  "styles": {
+    "ebook": "/.css",
+    "epub": "/.css",
+    "mobi": "/.css",
+    "pdf": "/.css",
+    "print": "/.css",
+    "website": "/.css"
+  },
+  "variables": {
+    "": "https://TamilNeram.github.io/",
+    "": "https://github.com/TACE16/PyBy",
+    "": "https://TACE16.github.io/PyBy/",
+    "": "https://github.com/TACE16/PyBy/releases/latest",
+    "": "mailto:TamilNeram247@gmail.com",
+    "": "3.14.0",
+    "": "https://python.swaroopch.com",
+    "": "https://swaroopch.com/buybook/",
+    "": "https://vim.swaroopch.com/"
+  }
+}

@@ -1,0 +1,5 @@
+$ python _3.py
+  File "_3.py", line 39
+     =  + os.sep +  + '_' +
+                                             ^
+SyntaxError: invalid syntax

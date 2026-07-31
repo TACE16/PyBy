@@ -1,0 +1,153 @@
+/* ==========================================================================
+   TACE16-Font
+   Uses TACE16-Font ONLY for Private Use Area (PUA) characters.
+   All other Unicode characters continue to use the normal fonts.
+   ========================================================================== */
+
+@font-face {
+    font-family: "TAC-Barathi";
+    src: url("TAC-Barathi.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+E100-E38D;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TAC-Kaveri";
+    src: url("TAC-Kaveri.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+E100-E38D;
+    font-display: swap;
+}
+
+/* ==========================================================================
+   Font families selected by HonKit's Aa menu
+   ========================================================================== */
+
+.book.font-family-0 {
+    --book-font:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif,
+        "TAC-Barathi";
+
+    --code-font:
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        Courier,
+        monospace,
+        "TAC-Barathi";
+}
+
+.book.font-family-1 {
+    --book-font:
+        "Times New Roman",
+        Georgia,
+        serif,
+        "TAC-Kaveri";
+
+    --code-font:
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        Courier,
+        monospace,
+        "TAC-Kaveri";
+}
+
+/* ==========================================================================
+   Main Book Content
+   ========================================================================== */
+
+.book .markdown-section,
+.book .book-summary,
+.book-header h1,
+.book-header h1 a,
+.book .navigation,
+.book .navigation a,
+.book .navigation span,
+.search-results,
+.search-results p,
+.search-results li,
+.search-results a,
+.search-results span,
+.book-search-results,
+.book-search-results * {
+    font-family: var(--book-font);
+}
+
+.book .markdown-section
+:is(
+    p,
+    ul,
+    ol,
+    li,
+    dl,
+    dt,
+    dd,
+    blockquote,
+    span,
+    strong,
+    em,
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    table,
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    th,
+    td,
+    caption
+) {
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   Inline Code (`...`)
+   ========================================================================== */
+
+.book .markdown-section :not(pre) > code {
+    font-family: var(--code-font);
+}
+
+/* ==========================================================================
+   Fenced Code Blocks (```...```)
+   Keep code monospace while allowing TACE16-Font for PUA identifiers.
+   ========================================================================== */
+
+.book .markdown-section pre,
+.book .markdown-section pre code,
+.book .markdown-section pre *,
+.book .markdown-section .highlight,
+.book .markdown-section .highlight pre,
+.book .markdown-section .highlight code,
+.book .markdown-section .hljs,
+.book .markdown-section .hljs * {
+    font-family: var(--code-font) !important;
+    font-variant-ligatures: contextual;
+}
+
+/* ==========================================================================
+   Preserve Font Awesome Icons
+   ========================================================================== */
+
+.fa,
+.fas,
+.far,
+.fab,
+[class^="fa-"],
+[class*=" fa-"],
+.fa::before,
+.fa::after {
+    font-family: FontAwesome !important;
+}

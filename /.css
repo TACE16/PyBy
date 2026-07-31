@@ -1,0 +1,39 @@
+/* ==========================================================================
+    TACE16-Font (PUA only)
+   ========================================================================== */
+
+@font-face {
+    font-family: "TAC-Barathi";
+    src: url("TAC-Barathi.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+E100 – U+E38D;
+    font-display: swap;
+}
+
+/* ==========================================================================
+   Language Selection Page
+   ========================================================================== */
+
+html,
+body {
+    font-family:
+        "TAC-Barathi",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+/* Language list */
+
+.languages,
+.languages li,
+.languages a {
+    font-family:
+        "TAC-Barathi",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}

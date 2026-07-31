@@ -1,0 +1,11 @@
+$ python __.py
+   swaroop@swaroopch.com
+
+  3  
+
+      swaroop@swaroopch.com
+      matz@ruby-lang.org
+      larry@wall.org
+
+  guido@python.org
+

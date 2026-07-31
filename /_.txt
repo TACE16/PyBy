@@ -1,0 +1,2 @@
+$ python _.py
+&lt;__main__. instance at x1171f518&gt;

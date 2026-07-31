@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "TAC-Barathi";
+    src: url("TAC-Barathi.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    /* Only legacy TACE16-Font PUA characters */
+    unicode-range: U+E100 – U+E38D;
+    font-display: swap;
+}
+
+/* ==========================================================================
+   Main document content
+   ========================================================================== */
+
+.book .markdown-section {
+    font-family:
+        "TAC-Barathi",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+/* Inherit the document font throughout normal content */
+
+.book .markdown-section
+:is(
+    p,
+    li,
+    td,
+    th,
+    blockquote,
+    span,
+    strong,
+    em,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    code
+),
+.book .markdown-section
+:is(
+    table,
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    caption,
+    dt,
+    dd
+),
+.book .markdown-section ul,
+.book .markdown-section ol {
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   Left navigation (Table of Contents)
+   ========================================================================== */
+
+.book .book-summary,
+.book .book-summary ul,
+.book .book-summary li,
+.book .book-summary a,
+.book .book-summary span,
+.book .book-summary b {
+    font-family:
+        "TAC-Barathi",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+/* Force inherited font in TOC while preserving icons */
+
+.book .book-summary *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
+    font-family: inherit !important;
+}
+
+/* ==========================================================================
+   Inline code (`...`)
+   ========================================================================== */
+
+.book .markdown-section :not(pre) > code {
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   Fenced code blocks (```...```)
+   ========================================================================== */
+
+.book .markdown-section pre,
+.book .markdown-section pre code,
+.book .markdown-section pre * {
+    font-family:
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        Courier,
+        monospace !important;
+}
+
+/* ==========================================================================
+   Book title in the header
+   ========================================================================== */
+
+.book-header h1,
+.book-header h1 a,
+.book-header .header-title,
+.book-header .header-title a {
+    font-family:
+        "TAC-Barathi",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+/* ==========================================================================
+   Preserve Font Awesome icons
+   ========================================================================== */
+
+.fa,
+.fas,
+.far,
+.fab,
+[class^="fa-"],
+[class*=" fa-"],
+.fa::before,
+.fa::after {
+    font-family: FontAwesome !important;
+}
