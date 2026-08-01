@@ -17,10 +17,10 @@ jobs:
 
     steps:
 
-      - name: கோப்புகளைப் பெறுதல்
+      - name: கோப்புகளைப் பெறு
         uses: actions/checkout@v6
 
-      - name: சார்புகளை நிறுவவும்
+      - name: சார்புகளை நிறுவு
         run: |
           sudo apt-get update
           sudo apt-get install -y \
@@ -34,7 +34,7 @@ jobs:
             libxkbcommon-x11-0 \
             libxcb-cursor0
 
-      - name: புதிய கலிப்ரேவை நிறுவுதல்
+      - name: கலிப்ரேவை நிறுவு
         run: |
           wget -nv https://download.calibre-ebook.com/linux-installer.sh
           sudo sh linux-installer.sh
@@ -43,39 +43,38 @@ jobs:
         run: |
           python3 /.py
 
-      - name: தமிழ் எழுத்துருக்களை நிறுவுதல்
+      - name: தமிழ் எழுத்துருக்களை நிறுவு
         run: |
           sudo mkdir -p /usr/local/share/fonts/tac
-
           find . -type f -name "TAC-*.ttf" \
             -exec sudo cp {} /usr/local/share/fonts/tac/ \;
 
           sudo fc-cache -f -v
 
-      - name: முனை.js-ஐ நிறுவுதல்
+      - name: முனை.js-ஐ நிறுவு
         uses: actions/setup-node@v4
         with:
           node-version: "24"
 
-      - name: ஆன்கிட்டை நிறுவுதல்
+      - name: ஆன்கிட் நிறுவு
         run: |
           make setup
 
-      - name: ஆன்கிட்டை உருவாக்குதல்
+      - name: ஆன்கிட் உருவாக்கு
         run: |
           make build
           make pdf
           make epub
 
-      - name: அறிவிலிகுழு பக்கங்கள் அமைத்தல்
+      - name: அறிவிலிகுழு பக்கங்கள் அமை
         uses: actions/configure-pages@v5
 
-      - name: இணையதளத்தைப் பதிவேற்றுதல்
+      - name: இணையதளத்தைப் பதிவேற்று
         uses: actions/upload-pages-artifact@v4
         with:
           path: "./"
 
-      - name: வெளியீட்டு பதிப்பு எண்ணை உருவாக்குதல்
+      - name: பதிப்பு எண்ணை உருவாக்கு
         id: version
         run: |
           MAJOR=$(date -u +"%Y")
@@ -85,12 +84,11 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "உருவாக்கிய பதிப்பு: $VERSION"
 
-      - name: வெளியீட்டை உருவாக்குதல்
+      - name: வெளியீட்டை உருவாக்கு
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="${{ steps.version.outputs.version }}"
-
           cp "./.pdf" "./$TAG.pdf"
           cp "./.epub" "./$TAG.epub"
 
