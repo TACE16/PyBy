@@ -1,7 +1,7 @@
 from fontTools.ttLib import TTFont, newTable
 from fontTools.ttLib.tables._c_m_a_p import CmapSubtable
 
-src = ".//TAC-Barathi.ttf"
+src = "./TAC-Barathi.ttf"
 dst = "TAC-Barathi"
 
 font = TTFont(src)
