@@ -214,7 +214,7 @@ jobs:
           MINOR=$(date -u +"%m%d")
           BUILD=$(date -u +"%H%M")
 
-          VERSION="PyBy-3.14-${MAJOR}.${MINOR}.${BUILD}"
+          VERSION="3.14-${MAJOR}.${MINOR}.${BUILD}"
 
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "உருவாக்கிய பதிப்பு: $VERSION"
@@ -229,7 +229,7 @@ jobs:
           cp "./.epub" "./$TAG.epub"
 
           gh release create "$TAG" \
-            --title "வெளியீடு $TAG" \
+            --title "மலைப்பாம்புக்கடி $TAG" \
             --generate-notes
 
           gh release upload "$TAG" \
